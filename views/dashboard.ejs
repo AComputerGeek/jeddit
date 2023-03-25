@@ -1,0 +1,18 @@
+<h1 class="mt-4">Dashboard</h1>
+<br>
+<p class="lead mb-3">Welcome <strong><%= dataUser.uname.charAt(0).toUpperCase() + dataUser.uname.slice(1) %></strong>!</p>
+
+<hr>
+<div style="display: flex; align-items: center;">
+    <div>
+        <a href="/posts/all-recent-posts" class="btn btn-secondary">Last 20 Posts</a>
+        <a href="/subs/list" class="btn btn-secondary">All Subgroups</a>
+        <a href="/posts/my-posts" class="btn btn-secondary">All My Posts</a>
+        <a href="/posts/create" class="btn btn-secondary">Create a Post</a>
+    </div>
+
+    <div style="margin-left: auto;">
+        <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    </div>
+</div>
+<hr>

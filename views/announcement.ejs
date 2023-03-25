@@ -1,0 +1,17 @@
+<h1 class="mt-4">Dashboard</h1>
+<br>
+<p class="lead mb-3">User: <strong><%= dataUser.uname.charAt(0).toUpperCase() + dataUser.uname.slice(1) %></strong>!</p>
+
+<hr>
+<div style="display: flex; align-items: center;">
+    <div>
+        <a href="/dashboard" class="btn btn-secondary">Home Dashboard</a>
+    </div>
+
+    <div style="margin-left: auto;">
+        <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    </div>
+</div>
+<hr>
+
+<h2 class="mt-4">Post just created!</h2>

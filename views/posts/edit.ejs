@@ -1,0 +1,29 @@
+<h1 class="mt-4">Dashboard</h1>
+<br>
+<p class="lead mb-3">Welcome <strong><%= dataUser.uname.charAt(0).toUpperCase() + dataUser.uname.slice(1) %></strong>!</p>
+
+<hr>
+<div style="display: flex; align-items: center;">
+    <div>
+        <a href="/posts/show/<%= postId %>" class="btn btn-secondary">Back to the post</a>
+    </div>
+
+    <div style="margin-left: auto;">
+        <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    </div>
+</div>
+<hr>
+
+<form action="../../posts/edited/<%= postId %>" method="post">
+    <div style="display: flex; flex-direction: column; margin: 60px 250px 10px ;">
+        <input type="text" name="title" placeholder="Title">
+        <br>
+        <input type="text" name="link" placeholder="Link">
+        <br>
+        <input type="text" name="description" placeholder="Description">
+        <br>
+        <input type="text" name="subgroup" placeholder="Subgroup">
+    </div>
+    <br>
+    <button style="width: 200px; padding: 10px; border-radius: 10px; display: block; margin: 0px auto;">Submit Edit</button>
+</form>

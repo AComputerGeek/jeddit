@@ -1,0 +1,35 @@
+<h1 class="mt-4">Dashboard</h1>
+<br>
+<p class="lead mb-3">User: <strong><%= dataUser.uname.charAt(0).toUpperCase() + dataUser.uname.slice(1) %></strong>!</p>
+
+<hr>
+<div style="display: flex; align-items: center;">
+    <div>
+        <a href="/dashboard" class="btn btn-secondary">Home Dashboard</a>
+        <a href="/subs/list" class="btn btn-secondary">Back to List</a>
+    </div>
+
+    <div style="margin-left: auto;">
+        <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    </div>
+</div>
+<hr>
+
+<h2 class="mt-4">All Posts Related to Subgroup "<%= subgroup.charAt(0).toUpperCase() + subgroup.slice(1) %>":</h2>
+<% allPosts.forEach(post => { %>
+    <% if(post.subgroup == subgroup) { %>
+        <div style="border: solid 2px lightgray; border-radius: 5px; padding: 15px; margin: 20px 0px 40px 0px; max-width: 600px;">
+            <p>Title: <strong><%= post.title.charAt(0).toUpperCase() + post.title.slice(1) %></strong></p>
+            <P>Description: <%= post.description %></P>
+            <p>Link: <i><a href="<%= post.link %>" target="_blank"><%= post.title.charAt(0).toUpperCase() + post.title.slice(1) %></a></i></p>
+
+            <% for( let index = 0; index < postMatchCreator.length; index++ ) { %>
+                <% if(post.id == postMatchCreator[index].postId) { %>
+                    <p>Creator: <%= postMatchCreator[index].creatorName.charAt(0).toUpperCase() + postMatchCreator[index].creatorName.slice(1) %></p>
+                <% } %>
+            <% } %>
+            
+            <a href="../../posts/show/<%= post.id %>" class="btn btn-secondary">Show more about this post...</a>
+        </div>
+    <% } %>
+<% }) %>

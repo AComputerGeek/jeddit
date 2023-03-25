@@ -1,0 +1,24 @@
+<h1 class="mt-4">Dashboard</h1>
+<br>
+<p class="lead mb-3">User: <strong><%= dataUser.uname.charAt(0).toUpperCase() + dataUser.uname.slice(1) %></strong>!</p>
+
+<hr>
+<div style="display: flex; align-items: center;">
+    <div>
+        <a href="/posts/show/<%= postId %>" class="btn btn-secondary">Back to the post</a>
+    </div>
+
+    <div style="margin-left: auto;">
+        <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    </div>
+</div>
+<hr>
+
+<br>
+<form action="../../posts/delete/<%= postId %>" method="post">
+    <div style="display: flex; flex-direction: column;">
+        <label for="">Are you sure want to delete this post?</label>
+        <button style="width: 60px; padding: 5px; border-radius: 10px;">Yes!</button>
+    </div>
+</form>
+<br>

@@ -1,0 +1,59 @@
+<h1 class="mt-4">Dashboard</h1>
+<br>
+<p class="lead mb-3">User: <strong><%= dataUser.uname.charAt(0).toUpperCase() + dataUser.uname.slice(1) %></strong>!</p>
+
+<hr>
+<div style="display: flex; align-items: center;">
+    <div>
+        <a href="/dashboard" class="btn btn-secondary">Home Dashboard</a>
+    </div>
+
+    <div style="margin-left: auto;">
+        <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    </div>
+</div>
+<hr>
+
+<div style="border: solid 2px lightgray; border-radius: 5px; padding: 15px; margin: 20px 0px 40px 0px; max-width: 600px;">
+    <p>Title: <strong><%= thisPost.title.charAt(0).toUpperCase() + thisPost.title.slice(1) %></strong></p>
+    <p>Description: <%= thisPost.description %></p>
+    <p>Link: <i><a href="<%= thisPost.link %>" target="_blank"><%= thisPost.title.charAt(0).toUpperCase() + thisPost.title.slice(1) %></a></i></p>
+    <p>Subgroup: <%= thisPost.subgroup.charAt(0).toUpperCase() + thisPost.subgroup.slice(1) %></p>
+    <p>Creator: <%= creator.uname.charAt(0).toUpperCase() + creator.uname.slice(1) %></p>
+    <p>Creator ID: <%= creator.id %></p>
+    <p>Timestamp: <%= time %></p>
+
+    <% if (dataUser.id === thisPost.creator.id) { %>
+        <a href="../edit/<%= thisPost.id %>" class="btn btn-secondary">Edit</a>
+    <% } %>
+    
+    <% if (dataUser.id === thisPost.creator.id) { %>
+        <a href="../deleteconfirm/<%= thisPost.id %>" class="btn btn-secondary">Delete</a>
+    <% } %>
+
+    <hr>
+    <p><strong><%= thisPost.comments.length %> Comment(s):</strong></p>
+
+    <% if(thisPost.comments.length != 0) { %>
+        <% thisPost.comments.forEach(cm => { %>
+            <div style="border: dashed 1px black; border-radius: 10px;padding: 10px 15px; margin: 15px 0px;">
+                <p style="color: blueviolet; font-weight: 500;"><%= cm.description %></p>
+                <p>Creator: <%= cm.creator.uname.charAt(0).toUpperCase() + cm.creator.uname.slice(1) %></p>
+                <p>Time: <%= new Date(cm.timestamp) %></p>
+
+                <% if (thisPost.creator.id === dataUser.id || cm.creator.id === dataUser.id) { %>
+                    <a href="#" class="btn btn-secondary">Delete Comment</a>
+                <% } %>
+                
+            </div>
+        <% }) %>
+    <% } %>
+    
+    <br>
+
+    <form action="../comment-create/<%= thisPost.id %>" method="post">
+        <textarea rows="4" cols="70" name="comment" id="comment" placeholder="Type your comment..." style="padding: 10px; margin-top: 0px;"></textarea>
+        <br>
+        <button style="width: 130px; padding: 5px 10px; border-radius: 8px; margin: 5px auto;">Add Comment</button>
+    </form>
+</div>
