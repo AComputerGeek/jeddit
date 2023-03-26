@@ -23,7 +23,9 @@ router.post("/create", ensureAuthenticated, (req, res) => {
   const newSub  = subgroup.toLowerCase();
   const creator = req.user.id;
 
-  if(title.length === 0 || description.length == 0 || link.length === 0 || newSub.length === 0)
+  const newLink = `https://${link}`;
+
+  if(title.length === 0 || description.length == 0 || newLink.length === 0 || newSub.length === 0)
   {
     res.send(`<br>
               <h1>All fields should be filled!</h1>
@@ -32,7 +34,7 @@ router.post("/create", ensureAuthenticated, (req, res) => {
   }
   else
   {
-    database.addPost(title, link, creator, description, newSub);
+    database.addPost(title, newLink, creator, description, newSub);
 
     res.redirect("/announcement");
   }

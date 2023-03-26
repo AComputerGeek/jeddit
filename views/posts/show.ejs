@@ -14,10 +14,10 @@
 </div>
 <hr>
 
-<div style="border: solid 2px lightgray; border-radius: 5px; padding: 15px; margin: 20px 0px 40px 0px; max-width: 600px;">
+<div style="border: solid 2px lightgray; border-radius: 5px; padding: 15px; margin: 20px 0px 40px 0px; max-width: 800px;">
     <p>Title: <strong><%= thisPost.title.charAt(0).toUpperCase() + thisPost.title.slice(1) %></strong></p>
     <p>Description: <%= thisPost.description %></p>
-    <p>Link: <i><a href="<%= thisPost.link %>" target="_blank"><%= thisPost.title.charAt(0).toUpperCase() + thisPost.title.slice(1) %></a></i></p>
+    <p>Link: <i><a href="<%= thisPost.link %>" target="_blank"><%= thisPost.link %></a></i></p>
     <p>Subgroup: <%= thisPost.subgroup.charAt(0).toUpperCase() + thisPost.subgroup.slice(1) %></p>
     <p>Creator: <%= creator.uname.charAt(0).toUpperCase() + creator.uname.slice(1) %></p>
     <p>Creator ID: <%= creator.id %></p>
@@ -41,7 +41,7 @@
                 <p>Creator: <%= cm.creator.uname.charAt(0).toUpperCase() + cm.creator.uname.slice(1) %></p>
                 <p>Time: <%= new Date(cm.timestamp) %></p>
 
-                <% if (thisPost.creator.id === dataUser.id || cm.creator.id === dataUser.id) { %>
+                <% if(thisPost.creator.id === dataUser.id || cm.creator.id === dataUser.id) { %>
                     <a href="#" class="btn btn-secondary">Delete Comment</a>
                 <% } %>
                 

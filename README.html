@@ -1,0 +1,612 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Amir Armion\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="assignment-1---jeddit">Assignment #1 - Jeddit</h1>
+
+<h2 class="mume-header" id="introduction">Introduction</h2>
+
+<p>In this assignment, you will demonstrate an ability to make a web application.  Specifically, this will be a multi-page app, with no need to write front-end JavaScript.  You will use Express.js, including a templating engine, to implement multiple routes across multiple resources, and you will use cookies to allow users to have logins.</p>
+<p>In particular, we&apos;re making a reddit clone.</p>
+<h2 class="mume-header" id="types-of-resources">Types of Resources</h2>
+
+<p>There are a few different kinds of things that you need to think about.  These are things that make sense to the database, and many of them also make sense to the routes you need to write.</p>
+<h3 class="mume-header" id="users">Users</h3>
+
+<ul>
+<li><strong>USERS</strong> correspond to people who can log in.
+<ul>
+<li>Users directly have this data:
+<ul>
+<li>id</li>
+<li>uname</li>
+<li>password</li>
+</ul>
+</li>
+<li>Users relate to this other data:
+<ul>
+<li>they may have authored zero or more postings</li>
+<li>they may have authored zero or more comments</li>
+<li>for any given post, they may have voted it up, or down, or not at all</li>
+<li>for any given comment, they may have voted it up, or down, or not at all</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="subgroups">Subgroups</h3>
+
+<ul>
+<li><strong>SUBGROUPS</strong> are categories of the site.  Every post belongs to one subgroup.  Unlike real reddit, subgroups are created dynamically, simply by saying a post belongs to one.
+<ul>
+<li>Subgroups directly have this data:
+<ul>
+<li>name</li>
+</ul>
+</li>
+<li>Subgroups relate to this other data:
+<ul>
+<li>subs always contain one or more postings</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="postings">Postings</h3>
+
+<ul>
+<li><strong>POSTINGS</strong> are the main content of the site.  The purpose of a posting is a link, presumably to some external site.  Postings also have some explanatory text, and a title.  Postings can be voted up or voted down, and thus have a vote total.
+<ul>
+<li>Postings directly have this data:
+<ul>
+<li>id</li>
+<li>title</li>
+<li>link</li>
+<li>description</li>
+<li>creator</li>
+<li>subgroup</li>
+<li>timestamp</li>
+</ul>
+</li>
+<li>Postings relate to this other data:
+<ul>
+<li>they&apos;re by a user</li>
+<li>they&apos;re in a sub</li>
+<li>they have zero or more comments</li>
+<li>they have a vote total</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="comments">Comments</h3>
+
+<ul>
+<li><em><strong>COMMENTS</strong></em> are secondary content (well, I guess some people think the comments are the best part).  They&apos;re just short text, hopefully about the main posting.
+<ul>
+<li>Comments directly have this data:
+<ul>
+<li>id</li>
+<li>description</li>
+<li>creator</li>
+<li>postid</li>
+<li>timestamp</li>
+</ul>
+</li>
+<li>Comments relate to this other data:
+<ul>
+<li>they&apos;re by a user</li>
+<li>they belong to a post</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="actual-requirements-organized-by-grade">Actual Requirements, organized by Grade</h2>
+
+<h3 class="mume-header" id="pass">PASS</h3>
+
+<p>For this level, the web-app must be basically working.</p>
+<p>Users must be able to log in and log out.  Guest users (i.e. not currently logged in) can view posts and subgroups and comments.  Logged-in users can do that, plus create posts and comment on posts.</p>
+<p>Posts are placed into subgroups, simply by specifying a subgroup during post-creation.</p>
+<h4 class="mume-header" id="routes-required">Routes Required</h4>
+
+<p>In case it&apos;s not obvious, all GET routes, unless otherwise specified, should <code>res.render</code> a template.  All POST routes, unless otherwise specified, should do their work and then <code>res.redirect</code>.</p>
+<ul>
+<li>auth stuff
+<ul>
+<li><code>GET /login</code></li>
+<li><code>POST /login</code></li>
+<li><code>POST /logout</code></li>
+</ul>
+</li>
+<li>home
+<ul>
+<li><code>GET /</code>
+<ul>
+<li>shows a listing of the most recent 20 posts
+<ul>
+<li>each entry has a link, which uses the title for its visible text</li>
+<li>each entry also lists the user that created it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>subs
+<ul>
+<li><code>GET /subs/list</code>
+<ul>
+<li>shows a list of all existing subs that have at least one post
+<ul>
+<li>each entry is a link to the appropriate <code>GET /subs/show/:subname</code></li>
+<li>sort them predictably somehow, either alphabetical or by-post-count or something, up to you</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>GET /subs/show/:subname</code>
+<ul>
+<li>same as <code>GET /</code>, but filtered to only show posts that match the subname</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>individual posts
+<ul>
+<li><code>GET /posts/show/:postid</code>
+<ul>
+<li>shows post title, post link, timestamp, and creator</li>
+<li>also has a list of <em>all comments</em> related to this post
+<ul>
+<li>each of these should show the comment description, creator, and timestamp</li>
+<li>optionally, each comment could have a link to delete it</li>
+</ul>
+</li>
+<li>if you&apos;re logged in, a form for commenting should show</li>
+</ul>
+</li>
+<li><code>GET /posts/create</code>
+<ul>
+<li>form for creating a new post</li>
+</ul>
+</li>
+<li><code>POST /posts/create</code>
+<ul>
+<li>processes the creation</li>
+<li>doesn&apos;t allow obviously-silly creations, for example if there&apos;s no link and also no description
+<ul>
+<li>(no-link is okay if you want to do that, though)</li>
+</ul>
+</li>
+<li>every post must have a &quot;sub&quot;, but it can be any string, including any string not previously used
+<ul>
+<li>so if the sub already exists, connect this post to that sub</li>
+<li>but if the sub doesn&apos;t already exist, make a new sub!</li>
+</ul>
+</li>
+<li>when finished redirects to the post just created</li>
+</ul>
+</li>
+<li><code>GET /posts/edit/:postid</code>
+<ul>
+<li>form for editing an existing post</li>
+<li>please think for a moment about which parts of a post should be editable, and which should not</li>
+<li>obviously shouldn&apos;t load unless you&apos;re logged in <em>as the correct user</em></li>
+</ul>
+</li>
+<li><code>POST /posts/edit/:postid</code>
+<ul>
+<li>redirect back to the post when done</li>
+</ul>
+</li>
+<li><code>GET /posts/deleteconfirm/:postid</code>
+<ul>
+<li>form for confirming delete of an existing post</li>
+<li>shouldn&apos;t load unless you&apos;re logged in <em>as the correct user</em></li>
+</ul>
+</li>
+<li><code>POST /posts/delete/:postid</code>
+<ul>
+<li>if cancelled, redirect back to the post</li>
+<li>if successful, redirect back to the <em>sub that the post belonged to</em></li>
+</ul>
+</li>
+<li><code>POST /posts/comment-create/:postid</code>
+<ul>
+<li>remember how <code>GET /posts/show/:postid</code> has a form for comments? It submits to here.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>comments - these routes are <em>all optional</em> at the PASS level, but I personally would find it useful to make them
+<ul>
+<li><code>GET /comments/show/:commentid</code>
+<ul>
+<li>shows just a single comment with all its data and any links that are useful</li>
+</ul>
+</li>
+<li><code>GET /comments/deleteconfirm/:commentid</code>
+<ul>
+<li>could be triggered from <code>GET /posts/show/:postid</code> or from <code>GET /comments/show/:commentid</code></li>
+</ul>
+</li>
+<li><code>POST /comments/delete/:commentid</code></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="code-organization">Code organization</h4>
+
+<p>I expect you to use <code>express.Router</code> to organize your routes where appropriate (i.e. subs and posts, and if you do comments routes then those too).</p>
+<p>I expect your variable names to be vaguely reasonable.  An example of unreasonable is a variable with a name that is lies about what&apos;s in it (e.g. the variable is called <code>post</code> but it always contains an array of multiple posts, or a variable called <code>post_id</code> that contains a user ID).  Also unreasonable is a variable that is super vague when there&apos;s an obvious less-vague name (e.g. a variable called <code>info</code> when there&apos;s an obvious better alternative like <code>post_count</code> or <code>user_name</code>).</p>
+<h4 class="mume-header" id="ordering">Ordering</h4>
+
+<p>At this level, every time there is a listing of posts or comments, they should be sorted by timestamp, with the most recent post/comment at the top.</p>
+<h4 class="mume-header" id="header-required">Header required</h4>
+
+<p>Also, there should be a header shared across all pages.<br>
+It should include the site title, of course, and that should be a link back to <code>GET /</code>.<br>
+It should also include a link to  <code>GET /subs/list</code>.</p>
+<p>If the user is logged out, the header should include a link to the login page (and, if you&apos;re doing signup stuff for higher grades, the signup page too).</p>
+<p>If the user is logged in, the header should NOT include a login link, but it SHOULD include a link to create a new post.</p>
+<h4 class="mume-header" id="css-requirements">CSS requirements</h4>
+
+<p>CSS requirements are <em>very very low</em>.  We&apos;re not really doing CSS in this course.  BUT, please try to not make it ugly.  In particular, here are some suggestions.</p>
+<ul>
+<li>it&apos;d be nice if the header looks at least sort of like a header</li>
+<li>it&apos;d be nice if the lists look like lists</li>
+<li>in pages that combine posts and comments, it should be easy to see that the post is more important than the comments (just font-size or something would be enough)</li>
+</ul>
+<h3 class="mume-header" id="satisfactory">SATISFACTORY</h3>
+
+<p>For this level, probably most of the work will be on getting voting working.</p>
+<h4 class="mume-header" id="voting">Voting</h4>
+
+<p>Everywhere it&apos;s possible to see a post (homepage, subgroup listing, individual post page, etc), there should be an upvote button and a downvote button beside the post link.  I suggest using two buttons, one that says &quot;+&quot; or &quot;Up&quot; or something, and one that says &quot;-&quot; or &quot;Down&quot; or something.  Just make it obvious.  Oh, and of course this voting stuff should only show if the user is logged in.</p>
+<p>Each button could be its own form, or they could both be in one form.  Whichever seems easier for you.</p>
+<p>Also everywhere it&apos;s possible to see a post, the net vote total should be visible (positive votes minus negative votes)</p>
+<p>Unlike reddit, clicking on a vote link will do a full-page refresh.  That&apos;s lame, but that&apos;s where we&apos;re at.</p>
+<p>This is one area where CSS is necessary.  If I have voted on a post (up or down), the button should be obviously active.  Make the whole thing filled in or something.</p>
+<p>If I click the already-voted on button, that should cancel my vote.  So I should be able to upvote something, then change my mind and switch that to downvote by clickong on downvote, and then change my mind again and cancel my vote by clicking on the upvote.</p>
+<p>So you&apos;ll need to add at least this route:</p>
+<ul>
+<li><code>POST /posts/vote/:postid/</code>
+<ul>
+<li>uses a body field <code>setvoteto</code> to set vote to +1, -1, or 0, overriding previous vote</li>
+<li>redirects back to <code>GET /posts/show/:postid</code></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="user-signup">User Signup</h4>
+
+<p>Also it should be possible to sign up as a new user.  This should be pretty easy, right?  You&apos;ve already got login working?</p>
+<p>Obviously this means two new routes, one for the form and one for the post.  Actually, if you feel like combining the login page and the signup page, then you only have to do one extra route, but it&apos;s probably harder to get right.</p>
+<h4 class="mume-header" id="security">Security</h4>
+
+<p>Also at this point I will be requiring some basic security.</p>
+<ul>
+<li>It must not be possible to impersonate a user by editing the cookies.</li>
+<li>It must not be possible to use routes that should only be accessible to a logged-in user when I&apos;m not logged in.</li>
+<li>It must not be possible to use routes that should only be accessible to a particular user when I&apos;m not logged in as that particular user.</li>
+</ul>
+<p>I will have access to the dev tools when I attempt to bypass these restrictions, just like any 12-year-old hacker.  And of course, I&apos;ll also be able to read your source code, to save myself time just trying every possible attack, which is what the 12-year-olds would do (using scripts).</p>
+<h4 class="mume-header" id="code-organization-1">Code organization</h4>
+
+<p>So, you know how back at the Pass grading tier I said I was going to be completely intolerant of bad coding style?  Okay, maybe I exaggerated a bit.  But this time I&apos;m not kidding.  Perfect, please.  You&apos;re not getting a grade higher than 55% if it hurts me just to read your code.  Better that I bitch you out than your first boss.</p>
+<h3 class="mume-header" id="exemplary">EXEMPLARY</h3>
+
+<h4 class="mume-header" id="comment-editing">Comment editing</h4>
+
+<p>Comments should be editable, deletable, etc, just like everything else.</p>
+<ul>
+<li>So all of these comments routes
+<ul>
+<li><code>GET /comments/show/:commentid</code></li>
+<li><code>POST /comments/reply/:commentid</code></li>
+<li><code>GET /comments/edit/:commentid</code></li>
+<li><code>POST /comments/edit/:commentid</code></li>
+<li><code>GET /comments/deleteconfirm/:commentid</code></li>
+<li><code>POST /comments/delete/:commentid</code></li>
+</ul>
+</li>
+</ul>
+<p>All of these will go in their own <code>router</code>, of course, because consistency will help the next developer who works on this project.</p>
+<p>Oh, and make sure that if a post is deleted, its comments are also deleted, please.</p>
+<h4 class="mume-header" id="ordering-1">Ordering</h4>
+
+<ul>
+<li>Any view that shows a list of posts can now be viewed in at least two orders:
+<ul>
+<li>by date (the thing you should already have working)</li>
+<li>by vote count (positive minus negative)</li>
+<li>optionally, by some combination, the way reddit does &quot;hot&quot;</li>
+<li>optionally, by total votes (positive <em>plus</em> negative), like reddit&apos;s &quot;controversial&quot;</li>
+</ul>
+</li>
+</ul>
+<p>There should be some UI element on each page to switch between which ordering is active; I suggest buttons or links in a little row near the top.</p>
+<p>Ideally this will be implemented by adding a query parameter ( <a href="https://expressjs.com/en/4x/api.html#req.query">https://expressjs.com/en/4x/api.html#req.query</a> ) like <code>?orderby=date</code> or <code>?orderby=votes</code>.</p>
+<p>Make sure that there&apos;s sensible default behaviour when the query parameter isn&apos;t specified.</p>
+<h4 class="mume-header" id="nested-comments">Nested Comments</h4>
+
+<p>It should now be possible for comments to be <em>replies</em> to other comments, and for this to be visible in the UI.</p>
+<p>So basically there should be a &quot;reply&quot; link below each comment, and it takes you to <code>GET /comments/show/:commentid</code>, which would, in addition to showing details about the comment, would also have a form for adding a reply.  That&apos;s the trivial part.</p>
+<p>You might need to edit the fake-db to change the comment data model, so that comments have an optional <code>parent_id</code> or something like that.  This is the only task where I would expect people to edit the fake-db.</p>
+<p>You then need to make it so that comments display in some kind of nested format.  Maybe just <code>&lt;ul&gt;</code>s inside <code>&lt;ul&gt;</code>s, maybe there&apos;s some CSS involved, I dunno.</p>
+<h3 class="mume-header" id="bonus">BONUS</h3>
+
+<p>If there are errors or problems in the way I wrote up this assignment, the first student to identify the issue and communicate it to me may receive a bonus mark, probably 1%, depending on how serious I think the problem is.  First come, first served.  But don&apos;t do it for the bonus, do it to help out current and future peers!</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
