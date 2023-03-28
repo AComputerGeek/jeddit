@@ -1,4 +1,4 @@
-# Assignment #1 - Jeddit
+# Jeddit
 
 
 ## Introduction
