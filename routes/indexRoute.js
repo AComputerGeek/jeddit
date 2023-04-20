@@ -4,7 +4,7 @@
 const express  = require("express");
 const router   = express.Router();
 const database = require("../fake-db");
-const { ensureAuthenticated, isAdmin } = require("../middleware/checkAuth");
+const { ensureAuthenticated } = require("../middleware/checkAuth");
 
 // Dashboard Rout:
 // URL: "localhost:8000/dashboard"
